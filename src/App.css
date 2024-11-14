@@ -1,0 +1,264 @@
+/* App.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4ff; /* Light blue background */
+  color: #333;
+}
+
+/* Main App Container */
+.app-container {
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #007bff; /* Blue theme color */
+  padding: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-link {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+  padding: 0.5rem;
+}
+
+.nav-link:hover {
+  color: #66b2ff; /* Lighter blue on hover */
+  transform: scale(1.1);
+}
+
+.login-link {
+  background-color: white;
+  color: #007bff;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+
+.login-link:hover {
+  background-color: #66b2ff;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Page Titles */
+.page-title {
+  font-size: 2.5rem;
+  color: #007bff; /* Blue theme color */
+  margin: 2rem 0;
+  animation: slideInDown 0.8s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideInDown {
+  0% { transform: translateY(-100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Button Styles */
+.button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background-color: #66b2ff;
+  transform: translateY(-3px);
+}
+
+/* Card Style (for Feed items) */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem auto;
+  width: 80%;
+  max-width: 500px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Footer */
+.footer {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Specific Animations for Content */
+.slide-in {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Explore Interests Section */
+.explore-interests {
+  margin-bottom: 2rem;
+}
+
+.interests {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.interest {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.interest:hover {
+  background-color: #66b2ff;
+}
+
+/* Latest Posts and Upcoming Events Section */
+.latest-posts, .upcoming-events {
+  margin-bottom: 2rem;
+}
+
+.post, .event {
+  margin: 10px auto;
+  padding: 15px;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.post strong, .event strong {
+  font-size: 18px;
+  color: #007bff;
+}
+
+.post span, .event span {
+  font-size: 14px;
+  color: #666;
+  margin-left: 5px;
+}
+
+.post p, .event p {
+  margin-top: 8px;
+  color: #333;
+}
+
+/* Why Join Section */
+.why-join p {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .nav-link {
+    margin: 0.5rem 0;
+  }
+}
+/* App.css */
+
+/* Full-screen YouTube iframe background */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* To place video behind overlay content */
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Overlay Content */
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: dark overlay for readability */
+  padding: 2rem;
+  min-height: 100vh;
+}
+.page-title {
+  color: white;
+  font-size: 2.5rem; /* Adjust size as needed */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+.header {
+  margin-top: 4rem;
+}
+
+.page-title {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.join-button {
+  background-color: #ff6f61;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: #ff9f91;
+}
+
+/* Other content styles */
+.explore-interests, .latest-posts, .upcoming-events, .why-join {
+  color: #fff;
+  margin: 2rem 0;
+}
+
